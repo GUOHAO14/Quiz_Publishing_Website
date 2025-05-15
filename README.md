@@ -47,5 +47,3 @@ This is a list of usernames and passwords that can be used to log into the syste
 - marshall, Marshall123.
 
 Passwords can only be reset by an admin account. And as a callback to the assumptions above, all types of accounts can only be created by admin accounts. These implementation are intended for maximum security and authorised access the website. 
-
-Thank you
