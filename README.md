@@ -32,6 +32,7 @@ Note: there is a *conn.php* file among the files that serves the purpose of esta
 As a security implementation, all user passwords are hashed (encrypted) in the database. You can visit the user table in the database, and you will find that the values of the password columns are all giberrish. This is completely normal and intended. This means that even if the database is somehow intruded with brute force, the password are hidden, and impersonation attempts will not be successful. 
 
 This is a list of usernames and passwords that can be used to log into the system:
+
 **Admin Login:** 
 - King, Masterkey123.
 - Queen, Masterkey123.
