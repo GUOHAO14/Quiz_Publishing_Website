@@ -11,7 +11,9 @@ The objective of the website is to:
 
 # Project Assumptions (And How It Works)
 1. In contrast to regular online quiz and assessment websites, our project is designed specifically as a closed system for the use within an educational institution. Our intent is to provide a secure website for educational institutions, with which the quality of the quizzes are guaranteed. Details are as below:
-  a. In the website’s initialisation, there is intentionally no sign up feature for account creation. Only the login feature is available.
-  b. This is made so that the general public is not allowed to access the website. This is because by design, all accounts in the systems are pre-registered by website’s administrators.
-  c. Only people within the institution in-use of the website own their respective accounts and can log in to the website with them.
-  d. Each accounts is assigned with a specific role, such as student, teacher or admin. Different roles have their distinct user interface and functionalities. For example, exclusively the institution’s teachers and admins are certified to create online quizzes.
+  - In the website’s initialisation, there is intentionally no sign up feature for account creation. Only the login feature is available.
+  - This is made so that the general public is not allowed to access the website. This is because by design, all accounts in the systems are pre-registered by website’s administrators.
+  - Only people within the institution in-use of the website own their respective accounts and can log in to the website with them.
+  - Each accounts is assigned with a specific role, such as student, teacher or admin. Different roles have their distinct user interface and functionalities. For example, exclusively the institution’s teachers and admins are certified to create online quizzes.
+
+2. In our project, there are three types of quizzes – Ranked Assessment, Test, and Exercise. Exercise is a regular quiz; Tests is also identical to Exercise, but they are timed; Ranked Assessment is a special quiz category which will be recorded in the leaderboard and showcased to the whole student grade. This added competitiveness is aimed to provide extra fun and intensity in the user experience, aside from just testing student’s performance.
