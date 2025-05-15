@@ -11,6 +11,7 @@ The objective of the website is to:
 
 # Project Assumptions (And How It Works)
 1. In contrast to regular online quiz and assessment websites, our project is designed specifically as a closed system for the use within an educational institution. Our intent is to provide a secure website for educational institutions, with which the quality of the quizzes are guaranteed. Details are as below:
+
   - In the website’s initialisation, there is intentionally no sign up feature for account creation. Only the login feature is available.
   - This is made so that the general public is not allowed to access the website. This is because by design, all accounts in the systems are pre-registered by website’s administrators.
   - Only people within the institution in-use of the website own their respective accounts and can log in to the website with them.
