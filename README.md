@@ -8,7 +8,11 @@ The objective of the website is to:
 4. Analyse and summarise student performance.
 5. To provide students with a reliable medium for online self-learning.
 
+---
+
 *Important: This repository is only intended solely for academic reference and personal learning. It should not be reused or resubmitted as original work under any circumstance. Unauthorized reproduction or misuse is strictly discouraged.*
+
+---
 
 
 # Project Assumptions (And How It Works)
