@@ -21,10 +21,10 @@ The objective of the website is to:
 
 ## How To Use
 ### 1. MySQL Database Import 
-In the zip file, there is an sql file that you must download to import it into XAMPP (phpMyAdmin) database. The connection would then be established by opening XAMPP control panel and activating (click 'Start') on two modules - Apache and MySQL. The database import then can be done after typing 'localhost/phpmyadmin' to visit phpMyAdmin page (alternatively, click 'Admin' in XAMPP control panel).
+Download the sql file, *morningkdb_database.sql*. Then, import it directly into XAMPP (phpMyAdmin) database. The database import can be done after typing 'localhost/phpmyadmin' to visit phpMyAdmin page (alternatively, click 'Admin' in XAMPP control panel). Once successful, a database with the name "morningkdb" will be created and used. The connection would then be established by opening XAMPP control panel and activating (click 'Start') on two modules - Apache and MySQL. 
 
 ### 2. Project Folder Placement in htdocs
-By now, the files in the zip folder should have already been extracted. Assuming that XAMPP is successfully installed, all the extracted files (which is in a folder) should be moved (or copy, paste) to the htdocs folder, which is child folder of xampp folder. The xampp folder should have been automatically created and usually located in C drive. This, and alongside step 1, ensure that the php files can connect to XAMPP's MySQL server. 
+Assuming that XAMPP is successfully installed, all the program files and folders is downloaded and contained in a parent folder (any name). After that, this particular parent folder is moved (or copy, paste) to the "htdocs" folder, which is a child folder of xampp folder. The xampp folder should have been automatically created after XAMPP installation and usually located in C drive. This, and alongside step 1, ensure that the php files can connect to XAMPP's MySQL server. 
 
 Note: there is a *conn.php* file among the files that serves the purpose of establishing a server connection. Make sure the database name in the file matches with the name of the database imported in phpMyAdmin. 
 
