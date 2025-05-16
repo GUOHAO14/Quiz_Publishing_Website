@@ -1,0 +1,349 @@
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+  margin-top: 20%;
+}
+
+body {
+  background-color: rgba(184, 215, 247, 0.67);
+  background-repeat: no-repeat;
+  background-size: cover; /* Make sure the image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  background-size: 100%;
+ }
+
+table{
+    padding:2%;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border:1px solid;
+}
+
+h1{
+  margin-left: 10px;
+}
+
+.name{
+    width:48%;
+    padding: 3px 5px;
+    border-radius: 5px;   
+    margin-bottom: 15px;
+}
+.dropdown{
+    margin-bottom: 8px;
+    margin-right: 50px;
+    text-align:left;
+    height: 20px;
+    font-size:15px;
+    width: 91%;
+    float:left;
+    border: ridge;
+}
+
+.qname{
+  width: 90%;
+  float:left;
+  margin-bottom:3px;
+  height: 20px;
+  font-size: 16px;
+  flex-grow: 1;
+  resize: none; /* Disable manual resizing */
+  font-size: 14px;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.description {
+    border: none;               
+    border-bottom: 2px solid #000; 
+    outline: none;     
+    padding: 3px 5px;
+    border-radius: 5px;            
+    width: 100%;               
+    font-size: 12px; 
+    margin-bottom: 15px;
+  }
+
+  .underline-input:focus {
+    border-bottom-color: #007BFF; 
+  }
+
+  .sidebutton {
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+#submitButton {
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.submit {
+    border: none;
+    cursor: pointer;
+    width: 31px;
+    height: 32px;
+    background: transparent;
+}
+
+
+  .remove {
+    border: none;
+    cursor: pointer;
+    float:right;
+    padding: 0px;
+    background: transparent;
+  }
+  
+  .remove img {
+    width: 24px; /* Set the image width */
+    height: 24px; /* Set the image height */
+  }
+
+  label{
+    height:20px;
+    font-size:15px;
+    width:50px;
+  }
+.questionbox{
+  border:1px solid;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding:20px;
+  margin-top:15px;
+
+}
+.addquestion{
+  margin-top: 10px;
+  width: 3%;
+  border:none;
+  cursor: pointer;
+}
+.addquestion img{
+  width:100%;
+
+}
+
+.Qbox{
+  border:none;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.firstline input {
+  width: 80%;
+  font-size: 15px;
+  border: ridge;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 2px;
+  justify-content: center;
+}
+
+/* Style for each label and input group */
+.form-group {
+  width: 40%; /* Adjust width to fit the text comfortably */
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Label styling */
+.form-group label {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  font-weight: bold;
+  font-size: 14px;
+  width: 40%; /* Ensure label has enough space */
+}
+
+/* Input and select styling */
+.form-group select,
+.form-group input {
+  border: none;
+  width: 50%; /* Adjust width for better fit */
+  font-size: 14px;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+}
+
+/* Styling for the placeholder for infinity symbol */
+input::placeholder {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* button animation */
+.question-box {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.question-box.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.question-box.animate-out {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.interactive-add-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.interactive-add-btn:hover {
+  background-color: #0056b3;
+}
+
+.interactive-add-btn:focus {
+  outline: none;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.content-container {
+  margin-top: 20px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+textarea.option-label {
+  flex-grow: 1;
+  resize: none; /* Disable manual resizing */
+  min-height: 20px; /* Set a minimum height */
+  max-width: 65%; /* Set a maximum width */
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.remove-option-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.remove-option-btn:hover {
+  background-color: #e60000;
+}
+
+.add-option-btn {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.add-option-btn:hover {
+  background-color: #45a049;
+}
+
+@media screen and (max-width: 740px) {
+ .form-group label{
+  font-size: 10px;
+ }
+
+ .form-group select, .form-group input {  
+  font-size: 9px;
+}
+}
+
+@media screen and (max-width: 675px) {
+  p {
+    font-size: smaller;
+}
+  }
+ 
+
+@media screen and (max-width: 560px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group{
+  width: 45%;
+}
+
+p{
+ font-size: small; 
+}
+
+.dropdown{
+  font-size: 12px;
+
+}
+}
+
+@media screen and (max-width:475px){
+  .form-group{
+    width: 70%;
+  }
+}
+

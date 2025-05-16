@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#headerContainer {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+#contentContainer {
+    width: 80%;
+    margin: calc(11vh + 3rem) auto 3rem auto;
+    padding-left: 14%;
+}
+
+button.filter-button {
+    margin: 2rem auto 10px auto;
+    background-color: #e7e7e7;
+    color: #333;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* User Management Section Styling */
+.user-management {
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.user-management h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.create-user-btn {
+    margin: 1.5rem auto;
+}
+
+.create-user-btn button {
+    background-color: #e7e7e7;
+    color: #333;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.create-user-btn button::before {
+    content: '+';
+    font-size: 20px;
+    margin-right: 5px;
+}
+/* Ensure container alignment and spacing */
+.search-bar {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center;
+    gap: 10px; /* Add spacing between elements */
+    margin: 20px auto; /* Space below the search bar */
+}
+
+.search-bar input {
+    width: 100%; /* Full width within its container */
+    max-width: 400px; /* Limit to a reasonable max size */
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+
+.filter-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px; /* Adds clear space between search bar and filter section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of filter items */
+    gap: 15px; /* Add consistent spacing between items */
+    justify-content: center; /* Center-align filters */
+}
+
+.filter-item {
+    min-width: 120px; /* Ensure filters have a minimum width */
+    text-align: left; /* Align content properly */
+}
+
+.filter-item label {
+    display: block; /* Place label on top of the input */
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.filter-item select {
+    width: 100%; /* Full width within its container */
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.filter-item input {
+    width: 100%; /* Full width within its container */
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+
+/* Results table styling */
+.results-table-container {
+    overflow-x: auto;
+    text-align: left;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.results-table th, .results-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.results-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.action-buttons button {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+
+.profileContainer {
+    border: 0.1rem solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;    
+}
+
+.noBullets {
+    list-style-type: none; /* Removes bullets */
+    padding-left: 5px;           /* Removes default padding */
+}
+
+#gradeFilterContainer {
+    display: none;
+}
+
+#classFilterContainer {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #contentContainer {
+        padding-left: unset;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    table {
+        display: table;
+        width: 100%;
+        background-color: unset;
+    }
+
+    tbody {
+        display: table-row-group;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        background-color: rgb(255, 254, 185);
+        display: block;
+        border: 5px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    tbody td {
+        background-color: #fff;
+        display: block;
+        position: relative;
+    }
+}

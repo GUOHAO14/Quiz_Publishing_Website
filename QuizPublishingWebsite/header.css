@@ -1,0 +1,110 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    border: 2px solid black;
+    background-color: #feec78;
+    border-collapse: collapse;
+    height: 11vh;
+    align-items: center;
+}
+
+.profileHeaderContainer {
+    margin: auto unset;
+    border: 0.1rem solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#headerProfile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;    
+}
+
+h1.header {
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+    margin-right: 5px;
+}
+
+button.menu {
+    border: 0px;
+    background-color: #feec78;
+    cursor: pointer;
+}
+
+a.logo {
+    margin: 0px 15px 0px 30px;
+}
+
+a.morning {
+    text-decoration: none;
+    color: black;
+    font-family: "mv boli";
+}
+
+a.profile {
+    margin: 0px 20px 0px 25px;
+}
+
+nav.header {
+    padding: 16px;
+    margin-left: auto;
+    border-radius: 30px;
+    background-color: #f1eabf;
+    display: flex;
+}
+
+a.header {
+    margin: 0px 20px;
+    font-size: 120%;
+    text-decoration: none;
+    color: black;
+}
+
+nav.header:hover {
+    background-color: #ffe056;
+}
+
+nav.header:active {
+    background-color: #ffd633; /* Even darker yellow for active state */
+    transform: scale(0.95);    /* Slightly shrink the button on press */
+}
+
+
+main {
+    padding: 0px 30px;
+}
+
+@media screen and (max-width: 670px) {
+    header{
+        height: 13vh;
+    }
+   
+}
+
+@media screen and (max-width: 467px) { 
+    nav.header {
+        padding: 7px;            
+        font-size: smaller;
+        margin-right: -15px;
+    }
+
+    h1.header {
+        font-size: larger;
+    }
+
+    img {
+        margin-right: -8px;
+    }
+}

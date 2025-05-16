@@ -1,0 +1,325 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#bodyContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: calc(11vh + 3rem) auto 3rem auto;
+    width: 100%;
+    padding-left: 14%;
+}
+
+.body {
+    position: relative;
+    background-color: blanchedalmond;
+    border-radius: 3rem;
+    padding: 2.5rem;
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+#back {
+    flex: 0;
+    width:40px;
+    height: 40px;
+    background-color: white;
+    padding: 2px;
+}
+
+#back {
+    border-radius: 12px;
+    border: 3px solid black;
+    box-shadow: -3px -3px 10px 4px rgba(0,0,0,0.07), 3px 3px 10px 4px rgba(0,0,0,0.07);
+}
+
+#back:hover {
+    cursor: pointer;
+    background-color: rgb(232, 232, 232);
+}
+
+#back:active {
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 36px;
+    height: 36px;
+    background-color: rgb(199, 199, 199);
+    box-shadow: none;
+}
+
+#header h1 {
+    position: absolute;
+    left: 39.5%;
+    transform: translateY(-44%);
+    margin: 20px;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: Arial;
+    color: black;
+    -webkit-text-stroke: 1px white;
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#user, #email {
+    padding: 25px;
+    background-color: rgb(255, 249, 213);
+    border: none;
+    border-radius: 30px;
+    box-shadow:-1px -1px 4px yellow, 1px 1px 4px yellow;
+    margin: 30px;
+    flex: 1 1 auto;
+}
+
+#user {
+    height: 180px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.profileContainer {
+    border: 0.1rem solid black;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile, #editingProfile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;
+}
+
+#editPen {
+    visibility: hidden;
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+}
+
+.profileContainer:hover > #editPen {
+    visibility: visible;
+}
+
+.profileContainer:hover > #profile {
+    filter: blur(2px);
+    filter: brightness(50%);
+}
+
+.identity {
+    width: 160px;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.identity > p {
+    margin: 6px;
+}
+
+#username {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    hyphens: auto;
+    overflow-wrap: anywhere;
+}
+
+#userId {
+    font-size: 14px;
+    color: rgb(101, 101, 101);
+}
+
+#email {
+    width: 250px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.trophyImg {
+    display: flex;
+    justify-content: center;
+}
+
+#emailContent {
+    font-weight: normal;
+    font-size: 14px;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    flex-wrap: wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+dialog {
+    background: rgb(224, 224, 224);
+    outline: 2px solid grey;
+    padding: 40px 14px 30px 14px;
+    position: fixed;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+    width: 350px;
+    height: fit-content;
+    box-shadow: 6px 6px 35px 2px rgba(204, 204, 204, 0.5), -6px -6px 35px 2px rgba(204, 204, 204, 0.5);
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 3;
+}
+
+.blurOverlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent overlay */
+    backdrop-filter: blur(10px); /* Apply blur effect to the overlay */
+    z-index: 3;
+}
+
+.dialogProfileContainer{
+    width: 12rem;
+    height: 12rem;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+#dialogAction {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+dialog button{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    border: 2px solid grey;
+    padding: 5px 14px;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+dialog button:hover{
+    color: white;
+    background: linear-gradient(0deg, rgb(77, 77, 77), rgb(134, 134, 134), rgb(77, 77, 77));
+}
+
+dialog button:active{
+    color: white;
+    background: black;
+}
+
+
+/* @media screen and (max-width: 1000px) and (min-width: 901px) {
+    .body {
+        transform: scale(0.85);
+    }
+} */
+
+@media screen and (max-width: 1010px) {
+    .row1 {
+        width: 410px;
+    }
+
+    #email {
+        width: 270px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #header h1 {
+        left: 35%;
+    }
+
+    #back {
+        width: 36px;
+        height: 36px;
+    }
+
+    #back:active {
+        margin-top: 2px;
+        margin-left: 2px;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #bodyContainer {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 514px) {
+    .body {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .row1 {
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    #header h1 {
+        margin-left: 0;
+    }
+}
+
+/* @media screen and (max-width: 431px) {
+    #user {
+        width: 250px;
+    }
+
+    .profileContainer {
+        width: 80px;
+        height: 80px;
+    }
+
+    .identity {
+        width: 170px;
+    }
+} */
+
+@media screen and (max-width: 380px) {
+    #user, #email {
+        transform: scale(0.8);
+    }
+}

@@ -1,0 +1,228 @@
+p {
+    margin: 0;
+}
+
+body {
+    padding-top: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+#sunLogo {
+    display: block;
+    margin: 0 auto;
+    width: 85px;
+    padding: 0;
+}
+
+#body {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+#header {
+    color: black;
+    font-weight: 900;
+    font-size: 40px;
+    font-family: Courier;
+    text-shadow: 2px 2px white;
+    margin: 15px;
+    padding: 0;
+}
+
+form {
+    margin: 0;
+}
+
+table {
+    font-size: 18px;
+    background-color: rgb(255, 249, 213);
+    border: none;
+    border-radius: 30px;
+    padding: 20px 40px 10px 40px;
+    margin: auto;
+    text-align: left;
+    width: 400px;
+    box-shadow:-3px -3px 10px yellow, 3px 3px 10px yellow;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table tr td, #fgPW_td {
+    box-sizing: border-box;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    height: 20px;
+    line-height: 20px; /* Ensure text fits within 20px */
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+#welcome {
+    font-family: Courier;
+    font-size: 30px;
+    text-align: center;
+}
+
+#blankError, #invalidError {
+    border: 3px solid red;
+    border-radius: 5px;
+    background-color: rgba(212, 0, 0, 0.6);
+    color: white;
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0px;
+    margin: 14px 18px 0px 18px;
+}
+
+#fgPW {
+    font-size: 14px;
+}   
+
+#login_td{
+    text-align: center;
+    padding: 22px 22px 16px 22px;
+}
+
+#us, #pw {
+    width: 100%;
+    height: 37.5px;
+    padding: 8px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#us {
+    font-weight: 580;
+    letter-spacing: 1px;
+}
+
+.pwContainer {
+    position: relative;
+    display: flex;
+}
+
+#pw {
+    background-size: 28px;
+    padding-right: 46px;
+    letter-spacing: 2px;
+}
+
+#pwVisible, #pwNotVisible{
+    width: 35px;
+    position: absolute;
+    right: 5px;
+    margin-left: 274px;
+    cursor: pointer;
+}
+
+#pwVisible{
+    display: none;
+}
+
+#pwNotVisible{
+    display: block;
+}
+
+#loginButt {
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: all 0s ease;
+    border-radius: 7px;
+    box-shadow:-3px -3px 10px 4px rgba(0,0,0,0.07), 3px 3px 10px 4px rgba(0,0,0,0.07);
+    background: linear-gradient(0deg, rgb(9, 41, 136) 20%, rgb(17, 104, 254) 80%);
+    border: none;
+    padding: 10px 20px;
+}
+
+#loginButt:hover {
+    background: linear-gradient(0deg, rgb(0, 15, 255), rgb(0, 176, 251));
+}
+
+#loginButt:active {
+    font-size: 14px;
+    margin: 0px 0px 2.5px 0px;
+    background:rgb(9, 41, 136);
+    box-shadow:inset 1px 1px 2px 2px rgba(255,255,255,.5), inset -1px -1px 2px 2px rgba(255,255,255,.5);
+}
+
+#note {
+    color: rgb(103, 103, 103);
+    font-size: 13.5px;
+    margin: 0px;
+}
+
+#loginFailModal {
+    background: rgb(224, 224, 224);
+    outline: 2px solid grey;
+    padding: 40px 14px 20px 14px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    border-radius: 10px;
+    border: none;
+    width: 280px;
+    height: 120px;
+    box-shadow: 6px 6px 35px 2px rgba(204, 204, 204, 0.5), -6px -6px 35px 2px rgba(204, 204, 204, 0.5);
+    font-weight: bold;
+    font-size: 18;
+}
+
+#msgExit {
+    color: black;
+    margin-top: 30px;
+    border: 2px solid grey;
+    padding: 5px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0s ease;
+    border-radius: 7px;
+}
+
+#msgExit:hover {
+    color: white;
+    background: linear-gradient(0deg, rgb(77, 77, 77), rgb(134, 134, 134), rgb(77, 77, 77));
+}
+
+#msgExit:active {
+    color: white;
+    background: black;
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        width: 300px;
+    }
+
+    body {
+        font-size: medium;
+    }
+
+    #fgPW {
+        font-size: 12px;
+    }
+
+    #pwVisible, #pwNotVisible {
+        width: 28px;
+        text-align: center;
+        vertical-align: middle;
+        bottom: 3.75px;
+    }
+
+    #pw {
+        padding-right: 36px;
+    }
+}

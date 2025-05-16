@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(184, 215, 247, 0.67);
+}
+
+#contentContainer {
+    width: 80%;
+    margin: auto;
+    height: fit-content;
+}
+
+#contentHeader {
+    margin-top: 0.8rem;
+    width: 50%;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+#back {
+    flex: 0;
+    width:40px;
+    height: 40px;
+    background-color: white;
+    padding: 2px;
+    border-radius: 12px;
+    border: 3px solid black;
+    box-shadow: -3px -3px 10px 4px rgba(0,0,0,0.07), 3px 3px 10px 4px rgba(0,0,0,0.07);
+}
+
+#back:hover {
+    cursor: pointer;
+    background-color: rgb(232, 232, 232);
+}
+
+#back:active {
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 36px;
+    height: 36px;
+    background-color: rgb(199, 199, 199);
+    box-shadow: none;
+}
+
+#summaryHeading {
+    margin-left: 0.8rem;
+}
+
+#quizInfo {
+    width: 90%;
+}
+
+#quizInfo, #studentResults {
+    text-align: center;
+    margin: 1rem auto 3rem auto;
+    background: linear-gradient(0deg, rgb(233, 233, 189) 30%, beige 70%);
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+}
+
+#studentResults {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+#quizInfo > div {
+    margin: 2rem auto;
+}
+
+#quizDescription {
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+}
+
+#seeMoreButton {
+    visibility: hidden;
+    color: rgb(0, 104, 240);
+    cursor: pointer;
+}
+
+#quizMetadata {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.attribute {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    border-radius: 0.7rem;
+    align-items: stretch;
+    margin: 1rem auto;
+}
+
+.attributeLabel {
+    width: fit-content;
+    border: 1px solid rgb(57, 154, 234);
+    background-color: rgb(167, 221, 255);
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.attributeValue {
+    width: fit-content;
+    border-top: 1px solid rgb(57, 154, 234);
+    border-bottom: 1px solid rgb(57, 154, 234);
+    border-right: 1px solid rgb(57, 154, 234);
+    background-color: rgb(230, 230, 230);       
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreDisplay {
+    display: flex;
+    align-items: center;
+}
+
+#scoreBar {
+    width: 85%;
+    height: 1rem;
+    background-color: red;
+    border-radius: 1rem;
+    border: 2.5px solid black;
+    overflow: hidden;
+    position: relative;
+    margin-right: 0.2rem;
+}
+ 
+#greenBar {
+    background-color: rgb(33, 241, 47);
+    height: 100%;
+    width: 80%;
+}
+
+#score {
+    width: 15%;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+#completionAndTime {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.CTBox {
+    vertical-align: middle;
+    width: fit-content;
+    padding: 1rem 2rem 2rem 2rem;
+    background-color: antiquewhite;
+    margin: 0 1.4rem;
+    border-radius: 1.5rem;
+}
+
+.CTText {
+    font-size: 1.8rem;
+}
+
+#time {
+    display: block;
+}
+
+#resultsTable {
+    width: 100%;
+    background-color: #606060;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+#resultsTable th {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#resultsTable th, #resultsTable td {
+    padding-left: 10px;
+    text-align: left;
+}
+
+#resultsTable th {
+    background: linear-gradient(0deg, rgb(198, 244, 255) 15%, rgb(153, 231, 255) 70%);
+    font-weight: bold;
+}
+
+.noBullets {
+    list-style-type: none; /* Removes bullets */
+    padding-left: 5px;           /* Removes default padding */
+}
+
+.profileContainer {
+    border: 0.1rem solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;    
+}
+
+@media screen and (max-width: 786px) {
+    #contentContainer {
+        width: 40rem;
+    }
+    #studentResults {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #contentContainer {
+        width: 35rem;
+    }
+
+    #quizInfo {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 578px) {
+    #contentContainer {
+        width: 28rem;
+    }
+
+    #quizInfo {
+        font-size: smaller;
+    }
+
+    .CTBox {
+        font-size: smaller;
+        padding: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    #contentHeader {
+        width: unset;
+        padding-right: 0.8rem;
+    }
+
+    #contentContainer {
+        width: 20rem;
+    }
+
+    #quizDescription {
+        width: 90%;
+    }
+
+    #scoreBar {
+        width: 80%;
+    }
+
+    #score {
+        width: 20%;
+    }
+
+    #quizMetadata {
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+    
+    .attributeValue, .attributeLabel {
+        padding: 0.2rem 0.4rem;
+    }
+
+    .CTBox {
+        margin: 0 0.7rem;
+    }
+
+    #resultsTable {
+        display: table;
+        width: 100%;
+        background-color: unset;
+    }
+
+    #resultsTable tbody {
+        display: table-row-group;
+    }
+
+    #resultsTable thead {
+        display: none;
+    }
+
+    #resultsTable tbody tr {
+        background-color: #fff;
+        display: block;
+        border: 5px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    #resultsTable tbody td {
+        background-color: #fff;
+        border: 1px solid #464646;
+        display: block;
+        position: relative;
+    }
+}

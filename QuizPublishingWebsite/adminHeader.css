@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(184, 215, 247, 0.67);
+}
+/* Header styles */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: rgb(119, 186, 255);
+    position: fixed;
+    width: 100%;
+    height: 11vh;
+    box-shadow: 4px 4px 20px 2px rgba(0, 0, 0, .1);
+    z-index: 3;
+}
+
+a.logo {
+    margin: 0 10px 0 20px;
+}
+
+.sideBarImg {
+    width: 30px;
+    margin-right: 10px;
+}
+
+a.morning {
+    text-decoration: none;
+    color: black;
+    font-family: "mv boli";
+}
+
+.profile {
+    margin-left: auto;
+    margin-right: 0.8rem;
+}
+
+#logout {
+    margin-right: 0.8rem;
+}
+
+#logoutImg {
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 37px;
+    height: 37px;
+    box-shadow: -3px -3px 10px 4px rgba(0,0,0,0.07), 3px 3px 10px 4px rgba(0,0,0,0.07);
+}
+
+#logoutImg:hover {
+    background-color: rgb(199, 199, 199);
+    cursor: pointer;
+}
+
+#logoutImg:active {
+    width: 33px;
+    height: 33px;
+    margin: 2px;
+}
+
+/* Responsive font size for heading */
+h1.header {
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+    margin-right: 5px;
+}
+
+/* Sidebar styles for desktop */
+.sidebar {
+    width: 14%;
+    padding: 0;
+    background-color: #0057d9;
+    color: #fff;
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    padding-top: 14vh;
+    z-index: 2;
+}
+
+.linkContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar a {
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Responsive font size for sidebar links */
+}
+
+.sidebar a:hover {
+    background-color: rgb(0, 149, 255);
+}
+
+.sidebar a:active {
+    background-color: rgb(0, 149, 255);
+}
+
+/* Burger menu button for mobile */
+.burger-menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.profileHeaderContainer {
+    border: 0.1rem solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#headerProfile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;    
+}
+
+@media screen and (max-width: 1180px) and (min-width: 1050px){
+    .sideBarImg {
+        width: 26px;
+    }
+
+    .sidebar a {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width: 1050px) and (min-width: 920px){
+    .sideBarImg {
+        width: 22px;
+    }
+
+    .sidebar a {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 920px) and (min-width: 840px){
+    h1.header {
+        font-size: 27px;
+    }
+    
+    .sideBarImg {
+        width: 18px;
+    }
+
+    .sidebar a {
+        padding-left: 8px;
+    }
+}
+
+@media screen and (max-width: 839px) and (min-width: 769px){
+    h1.header {
+        font-size: 27px;
+    }
+
+    .sideBarImg {
+        width: 18px;
+    }
+
+    .sidebar a {
+        padding-left: 5px;
+    }
+
+    a.logo {
+        margin: 0 8px 0 10px;
+    }
+}
+
+/* Responsive sidebar for mobile dropdown */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+        width: 100%;
+        position: relative;
+        background-color: #0057d9;
+    }
+
+    .sidebar.active {
+        display: block; /* Show sidebar when active */
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    /* Hide "Administration Page" text on smaller screens */
+    .admin-text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .morning {
+        width: fit-content;
+    }
+
+    header {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    
+    a.logo {
+        margin: 0 5px 0 5px;
+    }
+}
+
+@media screen and (max-width: 459px) {
+    header {
+        height: 14vh;
+    }
+}

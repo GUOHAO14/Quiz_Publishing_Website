@@ -1,0 +1,454 @@
+* {
+    box-sizing: border-box;
+}
+
+#create {
+    visibility: visible;
+}
+
+#bodyContainer {
+    position: sticky;
+    width: 100%;
+    height: 100%;
+}
+
+#headerContainer {
+    position: absolute;
+    width: 100%;
+    min-height: 570px;
+    height: 100%;
+    left: 0;  /* Positioning the left compartment on the left side */
+    top: 0;
+    bottom: 0;
+}
+
+#contentContainer {
+    margin-left: 140px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3.5rem;
+}
+
+#mainBody {
+    margin-top: 150px;
+    border-radius: 10px 10px 15px 15px;
+    box-shadow: -7px -7px 5px 0px rgba(0,0,0,.1), 
+    -4px -4px 10px 0px rgba(0,0,0,.1), 
+    7px 7px 20px 0px rgba(0,0,0,.1), 
+    4px 4px 10px 0px rgba(0,0,0,.1);
+    position: relative;
+    top: 0;
+    width: 492px;
+}
+
+#back {
+    position: absolute;
+    left: -100px;
+}
+
+.tabMenu {
+    width: 492px;
+    display: flex;
+    justify-content: space-around;
+    background-color: blanchedalmond;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tabButton {
+    flex: 1;
+    padding: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+}
+
+.tabButton.active {
+    border-radius: 10px 10px 0px 0px;
+    background-color: beige;
+    box-shadow: inset 2px 2px 0px 0px rgba(255,255,255,.5), inset -1.4px 0px 0px 0px rgba(255,255,255,.5);
+}
+
+.content {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#edit, #delete {
+    display: none;
+}
+
+.contentBody {
+    background: linear-gradient(0deg, rgb(233, 233, 189) 30%, beige 70%);
+    background-color: beige;
+    padding: 20px;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+    width: 492px;
+}
+
+table {
+    border-radius: 10px;
+    padding: 20px;
+    width: 450px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+#editCourseDropdownContainer, #deleteCourseDropdownContainer {
+    width: 100%;
+}
+
+table tr th {
+    width: 180px;
+}
+
+table tr td {
+    width: 260px;
+}
+
+.customDropdown{
+    position: relative;
+    width: 240px;
+    margin-left: auto;
+    height: 37.5px;
+}
+
+#editCourseDropdown, #editCourseSubjectDropdown, #editCourseClassDropdown, #courseSubjectDropdown, #courseClassDropdown, #deleteCourseDropdown {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+}
+
+#editCourseDropdown, #deleteCourseDropdown {
+    padding-right: 0;
+}
+
+#editCoursedpText, #editCourseSubjectdpText, #editCourseClassdpText, #courseSubjectdpText, #courseClassdpText, #deleteCoursedpText {
+    margin-right: auto;
+    display: block;
+}
+
+#editCoursedpText, #deleteCoursedpText {
+    width: 100%;
+}
+
+.dpImg {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.dpImg img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.editCourseOptions, .editCourseSubjectOptions, .editCourseClassOptions, .courseSubjectOptions, .courseClassOptions, .deleteCourseOptions {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    max-height: 120px;
+    overflow-y: auto;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.editCourseContainer, .editCourseSubjectContainer, .editCourseClassContainer, .courseSubjectContainer, .courseClassContainer, .deleteCourseContainer {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#editCourseSearch, #editCourseSubjectSearch, #editCourseClassSearch, #courseSubjectSearch, #courseClassSearch, #deleteCourseSearch {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    text-align: left;
+    position: absolute;
+    padding-right: 46px;
+}
+
+.inpDpImg {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-right: 0.61rem;
+    justify-content: right;
+}
+
+.inpTextDpImg {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-right: -1px;
+    justify-content: right;
+}
+
+.fullTableDpImg img {
+    display: block;
+    box-sizing: unset;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+}
+
+.fullTableDpImg {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: right;
+    margin-right: 0.61rem;
+}
+
+.inpDpImg img, .inpTextDpImg img {
+    display: block;
+    box-sizing: unset;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+}
+
+dialog {
+    background: rgb(224, 224, 224);
+    outline: 2px solid grey;
+    padding: 40px 14px 0px 14px;
+    position: fixed;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+    width: 350px;
+    height: 170px;
+    box-shadow: 6px 6px 35px 2px rgba(204, 204, 204, 0.5), -6px -6px 35px 2px rgba(204, 204, 204, 0.5);
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#msgExit{
+    color: black;
+    background-color: rgb(229, 229, 229);
+    margin-top: 30px;
+    border: 2px solid grey;
+    padding: 5px 14px;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+#msgExit:hover{
+    color: white;
+    background: linear-gradient(0deg, rgb(77, 77, 77), rgb(134, 134, 134), rgb(77, 77, 77));
+}
+
+#msgExit:active{
+    color: white;
+    background: black;
+}
+
+input::placeholder {
+    color: grey;
+    font-style: italic;
+    font-size: 11px;
+}
+
+#create table, #edit table, #delete table {
+    border-spacing: 0 30px;
+}
+
+#create table td, #edit table td, #delete table td {
+    height: 37.5px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.subjectInput {
+    width: 200px;
+    height: 30px;
+    border: 2px solid grey;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#back, .mockSubmit{
+    font-family: 'Segoe UI';
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    box-shadow:-3px -3px 10px 4px rgba(0,0,0,0.07), 
+    3px 3px 10px 4px rgba(0,0,0,0.07), 
+    inset 2px 2px 2px 0px rgba(255,255,255,.5), 
+    inset -2px -2px 2px 0px rgba(255,255,255,.5);
+}
+
+#back {
+    font-size: 14px;
+    background: linear-gradient(0deg, rgb(136, 9, 9) 20%, red 80%);
+    padding: 7px 14px;
+}
+
+#back:hover {
+    background: linear-gradient(0deg, rgb(196, 0, 0) 30%, rgb(255, 81, 0) 70%);
+}
+
+#back:active {
+    font-size: 12px;
+    margin: 1px 1px 1px 1px;
+    background:rgb(111, 0, 0);
+    box-shadow:inset 1px 1px 2px 2px rgba(255,255,255,.5), inset -1px -1px 2px 2px rgba(255,255,255,.5);
+}
+
+.mockSubmit {
+    font-size: 16px;
+    background: linear-gradient(0deg, rgb(9, 41, 136) 20%, rgb(17, 104, 254) 80%);
+    padding: 10px 20px;
+}
+
+#submitForDelete:active, #submitForEdit:active, #submitForCreate:active {
+    font-size: 14px;
+    margin: 1px 0px 3px 0px;
+    background:rgb(9, 41, 136);
+    box-shadow: inset 1px 1px 2px 2px rgba(255,255,255,.5), inset -1px -1px 2px 2px rgba(255,255,255,.5);
+}
+
+.mockSubmit:hover {
+    background: linear-gradient(0deg, rgb(0, 15, 255), rgb(0, 176, 251));
+}
+
+@media screen and (max-width: 530px) {
+    .tabMenu {
+        width: 320px;
+    }
+
+    #mainBody {
+        width: 320px;
+    }
+
+    .contentBody {
+        width: 320px;
+    }
+
+    table {
+        width: 280px;
+        padding: 0px;
+    }
+    
+    #edit table, #delete table {
+        width: 280px;
+        padding: 0px;
+    }
+
+    table tr td {
+        width: 190px;
+    }
+    
+    table tr th {
+        font-size: 16px;
+        width: 90px;
+    }
+
+    tbody {
+        width: 280px;
+    }
+
+    #bodyContainer {
+        position: relative;
+    }
+
+    body {
+        font-size: smaller;
+        padding-bottom: 60px;
+    }
+
+    .customDropdown, .subjectInput, #editCourseSubjectSearch, #editCourseClassSearch, #courseSubjectSearch, #courseClassSearch{
+        width: 170px;
+    }
+
+    .customDropdown {
+        height: 34px;
+    }
+}
+
+/*for colwyn's header and sidebar*/
+@media screen and (max-width: 768px) {
+    #contentContainer {
+        margin-left: 0;
+    }
+
+    #back {
+        left: 0px;
+        top: -50px;
+    }
+
+    #mainBody {
+        margin-top: 185px;
+    }
+
+    body {
+        margin-bottom: 75px;
+    }
+}
+
+@media screen and (max-width: 858px) and (min-width: 531px){
+    .tabMenu {
+        width: 400px;
+    }
+
+    #mainBody {
+        width: 400px;
+    }
+
+    .contentBody {
+        width: 400px;
+    }
+
+    table {
+        width: 358px;
+    }
+
+    body {
+        font-size: smaller;
+    }
+}

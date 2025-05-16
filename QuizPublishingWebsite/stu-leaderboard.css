@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #8ED3F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 30px;
+padding: 10px 20px;
+background-color: #D8F4FF;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+text-align: center;
+display: inline-block;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+}
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0px;
+  margin-bottom: 30px;
+}
+
+.podium-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #C8E8FF;
+  width: 120px;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.podium-step.first {
+  height: 240px;
+  border: 2px solid #000; /* Main border */
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.podium-step.second {
+  height: 190px;
+  border: 2px solid #000; /* Main border */
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.podium-step.third {
+  height: 160px;
+  border: 2px solid #000; /* Main border */
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.medal {
+  margin-top: 10px;
+  background-color: #FFD700;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medal.second {
+  background-color: #C0C0C0;
+}
+
+.medal.third {
+  background-color: #CD7F32;
+}
+
+.stats {
+  font-size: 16px;
+  margin: 2px 0;
+  text-align: center;
+}
+
+.table-container {
+  margin-top: 20px;
+  width: 800px
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #C8E8FF;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #D8F4FF;
+}
+
+.table-row {
+  background-color: #E0F7FF;
+}
+
+.table-row:nth-child(even) {
+  background-color: #F4FBFF;
+}
+
+.rank {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
